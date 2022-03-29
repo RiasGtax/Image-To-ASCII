@@ -19,6 +19,9 @@ jimp.read(INPUT_FILE, (err, image) => {
     image.resize(500, 500);
   }
 
+  // Greyscale the image
+  image.greyscale();
+
   // Loop each pixel
   for (let y = 0; y < image.bitmap.height; y++) {
     for (let x = 0; x < image.bitmap.width; x++) {
